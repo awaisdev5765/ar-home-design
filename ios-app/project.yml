@@ -1,0 +1,30 @@
+name: ARRoomDesigner
+options:
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  ARRoomDesigner:
+    type: application
+    platform: iOS
+    sources:
+      - path: ARRoomDesigner
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.arhomedesign.ios
+        SWIFT_VERSION: 5.0
+        INFOPLIST_FILE: ARRoomDesigner/Resources/Info.plist
+    dependencies:
+      - package: FirebaseSDK
+        product: FirebaseAuth
+      - package: FirebaseSDK
+        product: FirebaseFirestore
+      - package: FirebaseSDK
+        product: FirebaseFunctions
+      - package: FirebaseSDK
+        product: FirebaseAnalytics
+      - package: FirebaseSDK
+        product: FirebaseCrashlytics
+packages:
+  FirebaseSDK:
+    url: https://github.com/firebase/firebase-ios-sdk.git
+    from: 11.6.0
